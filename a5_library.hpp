@@ -1,16 +1,13 @@
-#ifndef library_hpp
-#define library_hpp
+#ifndef a5_library.hpp
+#define a5_library.hpp
 
 #include <iostream>
 #include <string>
 #include <stdio.h>
 #include <vector>
-#include "book.hpp"
+#include "a5_book_hpp"
 
-//1 parametric construcot --> takes as input a vector of Book objs --> stores vales from vector into vector attribute
-//add default constructor w/ no param to initialize
-// print() --> output books stored in library
-//for each book instance, print book index inside vector + details in book::print()
+
 using namespace std;
 
 class Library {
@@ -19,18 +16,24 @@ class Library {
     Book my_books;
     
 public:
-    //constructors
+    //empty constructor
     Library();
     
+    //paramtric constructor
     Library(vector<Book>new_collection, Book new_books);
     
     // service functions
     
+    // checks if a book is existing and determines whether to insert/remove
+    
     bool insert_books(vector<Book>my_collection, Book my_books);
-    bool insert_books(string book_title, string book_authors, string date_of_publication);
-    void print(vector<Book>my_collection);
+    bool insert_books(string book_title, string book_authors, string date_of_publication, vector<Book>my_collection);
     bool book_removal(vector<Book>my_collection, Book my_books);
-    bool book_removal(string book_title, string book_authors, string date_of_publication);
+    bool book_removal(string book_title, string book_authors, string date_of_publication, vector<Book>my_collection);
+    
+    //prints the book collection and according information 
+    void print(vector<Book>my_collection);
 };
 
-#endif /* library_hpp */
+#endif /* a5_library.hpp */
+
