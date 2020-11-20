@@ -6,7 +6,7 @@ using namespace std;
 
 // PURPOSE: Models a book instance with corresponding attributes
 class Book {
-	string book_title = "N/A", book_authors = "N/A", date_of_publication = "N/A";
+	string book_title, book_authors, date_of_publication;
 
 public:
 	// PURPOSE: Parametric constructor with all attributes specified
