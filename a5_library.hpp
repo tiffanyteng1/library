@@ -16,21 +16,21 @@ using namespace std;
 class Library {
     //private attributes
     vector<Book>my_collection;
-    book my_books; 
+    Book my_books;
     
 public:
     //constructors
     Library();
     
-    Library(vector<book>new_collection, book new_books);
+    Library(vector<Book>new_collection, Book new_books);
     
-    // service functions 
+    // service functions
     
-    bool insert_books(vector<book>my_collection, book my_books);
-    bool insert_books(string title, string authors, string date_of_publication);
-    void print(vector<book>my_collection);
-    bool book_removal(vector<book>new_collection, book my_books);
-    bool book_removal(string title, string authors, string date_of_publication);  
-}; 
+    bool insert_books(vector<Book>my_collection, Book my_books);
+    bool insert_books(string book_title, string book_authors, string date_of_publication);
+    void print(vector<Book>my_collection);
+    bool book_removal(vector<Book>my_collection, Book my_books);
+    bool book_removal(string book_title, string book_authors, string date_of_publication);
+};
 
 #endif /* library_hpp */
