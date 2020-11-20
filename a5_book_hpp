@@ -10,6 +10,7 @@ class Book {
 
 public:
 	// PURPOSE: Parametric constructor with all attributes specified
+
 	Book(string new_title, string new_authors, string new_dop);
 	Book(string new_title, string new_authors);
 	Book(string new_title);
@@ -17,5 +18,12 @@ public:
 
 	// PURPOSE: Service function that outputs all attribute values
 	void print();
+	string get_title();
+	string get_author();
+	string get_dob();
+
+	bool compare(const Book& a);
+	bool operator==(const Book& v);
+
 };
 #endif 

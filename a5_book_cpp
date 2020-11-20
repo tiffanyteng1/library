@@ -24,4 +24,27 @@ void Book::print() {
 	cout << book_title << " "
 		<< book_authors << " "
 		<< date_of_publication << endl;
+
 }
+
+string Book::get_title() {
+	return book_title;
+}
+
+string Book::get_author(){
+	return book_authors;
+}
+
+string Book::get_dob(){
+	return date_of_publication;
+}
+
+bool Book::compare(const Book& a) {
+	return (book_title == a.book_title && book_authors == a.book_authors && date_of_publication == a.date_of_publication);
+}
+
+bool Book::operator == (const Book& a) {
+	return (book_title == a.book_title && book_authors == a.book_authors && date_of_publication == a.date_of_publication);
+}
+
+
